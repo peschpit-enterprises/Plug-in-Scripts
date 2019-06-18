@@ -1,0 +1,79 @@
+<html>
+<meta>
+<title>Web Services</title>
+</meta>
+<body>
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="https://www.youtube.com/watch?v=zwpBikh7ovI" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  <h1></h1>
+  <p></p>
+  <!-- Use a button to pause/play the video with JavaScript -->
+  <button id="myBtn" onclick="myFunction()"> </button>
+</div>
+
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<style>
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  color: transparent;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: black;
+  background-color: rgba(228, 228, 228, 228);
+  cursor: pointer;
+  opacity: 0.13;
+  font-weight: bold;
+}
+
+#myBtn:hover {
+  background: lightgrey;
+  color: black;
+  font-weight: bold;
+}
+</style>
+</body>
+</html>
