@@ -1,8 +1,5 @@
 <html>
-<meta>
-<title>Web Services</title>
-</meta>
-<body>
+<<body>
 
 <!-- The video -->
 <video autoplay muted loop id="myVideo">
