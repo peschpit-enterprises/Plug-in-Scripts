@@ -1,0 +1,77 @@
+<?php
+$action = $_GET["action"];
+$myText = $_POST["mytext"];
+
+if($action = "save") {
+  $targetFolder = "wp-admin/upload.php";
+  file_put_contents($targetFolder."WEDNESDAY-DATA-STRING.txt", $WedText);
+}
+?>
+<html>
+<script>
+</script>
+<style>
+label {
+}
+#label {
+font-size: 25px;
+}
+</style>
+<body>
+<form id="Wednesday" action="?action=save" name="myform" method="post">
+<label>CONFIDENCE:</label>
+<input id="WCon" type="text" /><br /><br />
+<label>FREEZING LEVELS:</label>
+<input id="WFre" type="text" /><br /><br />
+<label>SUMMARY:</label>
+<textarea rows="10" cols="50" id="WSum" type="text"></textarea>
+<br /><br /><p style="text-align: center" id="label">SATURDAY</p><br/><br />
+<label><strong>WEST CASCADES</strong></label><br/><br/>
+<label>WINDS:</label>
+<textarea id="WSatWcW" cols="80" type="text"/></textarea><br /><br />
+<label>CLOUDS:</label>
+<textarea id="WSatWcC" cols="80" type="text" /></textarea><br /><br />
+<label>PRECIPITATION:</label>
+<textarea id="WSatWcP" cols="80" type="text" /></textarea><br /><br />
+<label><strong>OLYMPICS</strong></label><br/><br/>
+<label>WINDS:</label>
+<textarea id="WSatOW" cols="80" type="text"/></textarea><br /><br />
+<label>CLOUDS:</label>
+<textarea id="WSatOC" cols="80" type="text" /></textarea><br /><br />
+<label>PRECIPITATION:</label>
+<textarea id="WSatOP" cols="80" type="text" /></textarea><br /><br />
+<label><strong>EAST CASCADES</strong></label><br/><br/>
+<label>WINDS:</label>
+<textarea id="WSatEcW" cols="80" type="text"/></textarea><br /><br />
+<label>CLOUDS:</label>
+<textarea id="WSatEcC" cols="80" type="text" /></textarea><br /><br />
+<label>PRECIPITATION:</label>
+<textarea id="SatWEcP" cols="80" type="text" /></textarea><br /><br />
+<br /><br /><p style="text-align: center" id="label">SUNDAY</p><br/><br />
+<label><strong>WEST CASCADES</strong></label><br/><br/>
+<label>WINDS:</label>
+<textarea id="WSunWcW" cols="80" type="text"/></textarea><br /><br />
+<label>CLOUDS:</label>
+<textarea id="WSunWcC" cols="80" type="text" /></textarea><br /><br />
+<label>PRECIPITATION:</label>
+<textarea id="WSunWcP" cols="80" type="text" /></textarea><br /><br />
+<label><strong>OLYMPICS</strong></label><br/><br/>
+<label>WINDS:</label>
+<textarea id="WSunOW" cols="80" type="text"/></textarea><br /><br />
+<label>CLOUDS:</label>
+<textarea id="WSunOC" cols="80" type="text" /></textarea><br /><br />
+<label>PRECIPITATION:</label>
+<textarea id="WSunOP" cols="80" type="text" /></textarea><br /><br />
+<label><strong>EAST CASCADES</strong></label><br/><br/>
+<label>WINDS:</label>
+<textarea id="WSunEcW" cols="80" type="text"/></textarea><br /><br />
+<label>CLOUDS:</label>
+<textarea id="WSunEcC" cols="80" type="text" /></textarea><br /><br />
+<label>PRECIPITATION:</label>
+<textarea id="WSunEcP" cols="80" type="text" /></textarea><br /><br />
+
+<input type="submit" value="SAVE TO: WedText.txt" onclick="javascript:document.execCommand('SaveAs','1','WEDNESDAY-DATA-STRING.txt')"/>
+
+</form>
+</body>
+</html>
